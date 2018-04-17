@@ -17,12 +17,12 @@ class Loginscreen extends Component {
       <div>
       <MuiThemeProvider>
         <div>
-           <RaisedButton label={"Register as Student"} primary={true} style={style} onClick={(event) => this.handleClick(event,'student')}/>
+           <RaisedButton label={"Register as Visitor"} primary={true} style={style} onClick={(event) => this.handleClick(event,'student')}/>
        </div>
        </MuiThemeProvider>
        <MuiThemeProvider>
        <div>
-          <RaisedButton label={"Register as Teacher"} primary={true} style={style} onClick={(event) => this.handleClick(event,'teacher')}/>
+          <RaisedButton label={"Register as an Animator"} primary={true} style={style} onClick={(event) => this.handleClick(event,'teacher')}/>
       </div>
       </MuiThemeProvider>
       </div>
@@ -33,8 +33,8 @@ class Loginscreen extends Component {
       loginscreen:[],
       loginmessage:'',
       loginButtons:loginButtons,
-      studentbuttonLabel:'Register as Student',
-      teacherbuttonLabel:'Register as Teacher',
+      studentbuttonLabel:'Register as a Visitor',
+      teacherbuttonLabel:'Register as an Animator',
       isLogin:true
     }
   }
@@ -77,12 +77,12 @@ class Loginscreen extends Component {
         <div>
         <MuiThemeProvider>
           <div>
-             <RaisedButton label={"Register as Student"} primary={true} style={style} onClick={(event) => this.handleClick(event,'student')}/>
+             <RaisedButton label={"Register as a Visitor"} primary={true} style={style} onClick={(event) => this.handleClick(event,'student')}/>
          </div>
          </MuiThemeProvider>
          <MuiThemeProvider>
          <div>
-            <RaisedButton label={"Register as Teacher"} primary={true} style={style} onClick={(event) => this.handleClick(event,'teacher')}/>
+            <RaisedButton label={"Register as an Animator"} primary={true} style={style} onClick={(event) => this.handleClick(event,'teacher')}/>
         </div>
         </MuiThemeProvider>
         </div>

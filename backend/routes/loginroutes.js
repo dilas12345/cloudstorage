@@ -4,7 +4,7 @@ var jsonfile = require('jsonfile');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'root@123',
+  password : 'jesuslove',
   database : 'cloudprint',
   insecureAuth: false
 });
@@ -30,7 +30,7 @@ exports.register = function(req,res){
      "created":today,
      "modified":today
    }
-   connection.query('INSERT INTO collegeusers SET ?',users, function (error, results, fields) {
+   connection.query('INSERT INTO cloudprint SET ?',users, function (error, results, fields) {
    if (error) {
      console.log("error ocurred",error);
      res.send({
@@ -54,7 +54,7 @@ exports.login = function(req,res){
   var userid= req.body.userid;
   var password = req.body.password;
   var role = req.body.role;
-  connection.query('SELECT * FROM collegeusers WHERE userid = ?',[userid], function (error, results, fields) {
+  connection.query('SELECT * FROM cloudprint WHERE userid = ?',[userid], function (error, results, fields) {
   if (error) {
     console.log("error ocurred",error);
     res.send({

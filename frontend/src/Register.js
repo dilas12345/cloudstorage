@@ -62,13 +62,16 @@ class Register extends Component {
   render() {
     // console.log("props",this.props);
     var userhintText,userLabel;
-    if(this.props.role === "student"){
-      userhintText="Enter your Student Id",
-      userLabel="Student Id"
+    if(this.props.role === "user"){
+      const def = (props) => {<div>
+        userhintText="Enter your User Id",
+        userLabel="User Id"
+      </div>}
+      
     }
     else{
-      userhintText="Enter your Teacher Id",
-      userLabel="Teacher Id"
+      userhintText="Enter your Seniore User Id",
+      userLabel="Senior User Id"
     }
     return (
       <div>

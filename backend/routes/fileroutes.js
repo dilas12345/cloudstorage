@@ -10,7 +10,7 @@ var jsonfile = require('jsonfile');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'root@123',
+  password: 'jesuslove',
   database: 'cloudprint',
   insecureAuth: false
 });
@@ -72,7 +72,7 @@ exports.fileprint = function (req, res) {
   var filepath = './userdata/userid.json'
   jsonfile.readFile(filepath, function (err, obj) {
     var userid = obj.userid;
-    connection.query('SELECT * FROM collegeusers WHERE userid = ?', [userid], function (error, results, fields) {
+    connection.query('SELECT * FROM cloudprint WHERE userid = ?', [userid], function (error, results, fields) {
             if (error) {
               console.log("error ocurred", error);
               // res.send({
@@ -82,7 +82,7 @@ exports.fileprint = function (req, res) {
             } else {
               if (results.length > 0) {
                 let printCount = results[0].printCount + filesArray.length;
-                connection.query('UPDATE collegeusers SET printCount = ? WHERE userid = ?', [printCount, userid], function (error, results, fields) {
+                connection.query('UPDATE cloudprint SET printCount = ? WHERE userid = ?', [printCount, userid], function (error, results, fields) {
                   if (error) {
                     console.log("error", error);
                   }
